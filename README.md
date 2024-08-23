@@ -11,4 +11,7 @@ sudo apt install protobuf-compiler
 
 # Install Protobuf header and lib
 sudo apt install libprotobuf-dev
+
+# Generate file set descriptor for api package
+protoc --include_imports --include_source_info --descriptor_set_out=src/descriptor.pb -I proto api.proto
 ```
